@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  href: string;
+  img: string;
+}
+
+const { img, href, title, body } = Astro.props;
+---
+
+<li class="link-card">
+  <a href={href}>
+    <img src={img} alt="Imagen del proyecto" />
+    <h2>
+      {title}
+      <span>&rarr;</span>
+    </h2>
+    <p>
+      {body}
+    </p>
+  </a>
+</li>
+<style>
+  .link-card {
+    list-style: none;
+    display: flex;
+    padding: 1px;
+    background-color: var(--color-base);
+    background-image: none;
+    background-size: 400%;
+    border-radius: 7px;
+    background-position: 100%;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: calc(1.5rem - 1px);
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    opacity: 0.8;
+  }
+
+  img {
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  h2 {
+    padding-top: 10px;
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .link-card:hover {
+    background-color: #374151;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+</style>

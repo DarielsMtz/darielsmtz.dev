@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Navbar from "../components/Navbar.astro";
+import SocialBtn from "../components/Social_btn.astro";
+import Title from "../components/Title.astro";
+---
+
+<Layout title="Porfolio | DarielsMtz">
+  <main class="relative h-full w-full bg-slate-900">
+    <div
+      class="z-10 fixed bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+    </div>
+    <Navbar />
+    <section
+      class="z-10 flex flex-col items-center justify-center max-w-screen-lg m-auto"
+      id="Inicio">
+      <article
+        class="z-10 flex flex-col items-center justify-center gap-4 p-8 text-center text-white h-screen">
+        <h1
+          class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
+          Hola, soy Dariels Mtz
+        </h1>
+        <p
+          class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+          Entusiasta de 22 años de Honduras 🇭🇳, especializado en <strong
+            >Desarrollo de Aplicaciones Web.</strong
+          > Experiencia en proyectos digitales y comprometido con la innovación.
+          Busco oportunidades para crecer y colaborar en el ámbito tecnológico.
+        </p>
+        <div class="inline-flex gap-2 pt-5">
+          <SocialBtn title="GitHub" href="https://github.com/darielsmtz" />
+          <SocialBtn
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/dariels-martinez/"
+          />
+        </div>
+      </article>
+
+	  <!-- Seccion de Proyectos -->
+      <section class="h-screen z-10" id="Proyectos">
+        <Title title="Proyectos" />
+        <section class="grid grid-cols-3 gap-6 z-10 pt-24 pb-24">
+          <Card
+            img="https://via.placeholder.com/250"
+            title="Proyectos"
+            body="Explora mis proyectos en GitHub."
+            href="/"
+          />
+          <Card
+            img="https://via.placeholder.com/250"
+            title="Proyectos"
+            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            href="/"
+          />
+          <Card
+            img="https://via.placeholder.com/250"
+            title="Proyectos"
+            body="Explora mis proyectos en GitHub."
+            href="/"
+          />
+        </section>
+      </section>
+    </section>
+  </main>
+</Layout>
