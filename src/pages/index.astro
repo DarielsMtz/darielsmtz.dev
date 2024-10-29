@@ -1,19 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Navbar from "../components/Navbar.astro";
 import SocialBtn from "../components/Social_btn.astro";
 import Title from "../components/Title.astro";
 ---
+
+<script>
+  import { initScrollReveal } from "../scrollReveal";
+  setTimeout(() => initScrollReveal(), 1000);
+</script>
 
 <Layout title="Porfolio | DarielsMtz">
   <main class="relative h-full w-full bg-slate-900">
     <div
       class="z-10 fixed bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
     </div>
-    <Navbar />
+
     <section
-      class="z-10 flex flex-col items-center justify-center max-w-screen-lg m-auto"
+      class="z-10 flex flex-col items-center justify-center max-w-screen-lg m-auto gap-10"
       id="Inicio">
       <article
         class="z-10 flex flex-col items-center justify-center gap-4 p-8 text-center text-white h-screen">
@@ -38,9 +42,10 @@ import Title from "../components/Title.astro";
       </article>
 
       <!-- Seccion de Proyectos -->
-      <section class="h-screen z-10" id="Proyectos">
+      <section class="h-screen
+        z-10" id="Proyectos">
         <Title title="Proyectos" />
-        <section class="grid grid-cols-3 gap-6 z-10 pt-24 pb-24">
+        <section class="grid grid-cols-3 gap-6 z-10 pt-16 pb-24">
           <Card
             img="https://via.placeholder.com/250"
             title="Proyectos"
@@ -60,6 +65,20 @@ import Title from "../components/Title.astro";
             href="/"
           />
         </section>
+      </section>
+
+      <!-- Seccion Sobre mi -->
+      <section class="h-screen z-10" id="SobreMi">
+        <Title title="Sobre Mi" />
+        <article class="text-center">
+          <p
+            class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+            Me llamo Dariels Martinez, soy desarrollador web y diseñador de
+            interfaces, con una amplia experiencia en el desarrollo de
+            aplicaciones web, desde aplicaciones móviles hasta sitios web
+            complejos y de alta escala.
+          </p>
+        </article>
       </section>
     </section>
   </main>
