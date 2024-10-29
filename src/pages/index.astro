@@ -11,7 +11,7 @@ import Title from "../components/Title.astro";
 </script>
 
 <Layout title="Porfolio | DarielsMtz">
-  <main class="relative h-full w-full bg-slate-900">
+  <main class="relative w-full bg-slate-900 sm:[p-12]">
     <div
       class="z-10 fixed bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
     </div>
@@ -20,7 +20,7 @@ import Title from "../components/Title.astro";
       class="z-10 flex flex-col items-center justify-center max-w-screen-lg m-auto gap-10"
       id="Inicio">
       <article
-        class="z-10 flex flex-col items-center justify-center gap-4 p-8 text-center text-white h-screen">
+        class="flex flex-col items-center justify-center gap-4 p-8 text-center text-white h-screen">
         <h1
           class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
           Hola, soy Dariels Mtz 😋
@@ -43,9 +43,10 @@ import Title from "../components/Title.astro";
 
       <!-- Seccion de Proyectos -->
       <section class="h-screen
-        z-10" id="Proyectos">
+         w-full" id="Proyectos">
         <Title title="Proyectos" />
-        <article class="grid grid-cols-2 wra gap-6 z-10 pt-14 pb-24">
+        <article
+          class="grid grid-cols-2 gap-6 z-10 pt-14 pb-24 md:grid-cols-2 min-[320px]:grid-cols-1">
           <Card
             href="/"
             img="../public/img/proyecto_1.webp"
@@ -173,9 +174,7 @@ import Title from "../components/Title.astro";
       </section>
 
       <!-- Seccion Sobre mi -->
-      <section
-        class="h-screen z-10 section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl pt-24"
-        id="SobreMi">
+      <section class="h-screen section w-full mx-auto pt-24" id="SobreMi">
         <Title title="Sobre Mi" />
         <article
           class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row pt-5">
